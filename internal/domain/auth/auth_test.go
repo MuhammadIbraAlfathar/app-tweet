@@ -37,7 +37,7 @@ func (s *AuthUseCaseTestSuite) TestRegister_Success() {
 	req := &RegisterRequest{
 		Email:    "ibraalfathar121@gmail.com",
 		Name:     "asdasa",
-		Password: "1212121",
+		Password: "121212ds1",
 		Role:     "admin",
 		Gender:   "male",
 	}
