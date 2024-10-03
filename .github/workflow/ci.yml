@@ -1,9 +1,10 @@
 name: CI App
 
 on:
+  push:
+    branches: ["master"]
   pull_request:
-    branches:
-      - master
+    branches: ["master"]
 
 job:
   build-and-test:
