@@ -1,0 +1,23 @@
+name: CI App
+
+on:
+  pull_request:
+    branches:
+      - master
+
+job:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: set-up-go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.22.0'
+
+      - name: run unit test
+        run: go test ./... -v
+
+      - name: build-application
+        run: go build -o server cmd/server/main.go
